@@ -89,6 +89,9 @@
           "options": {
             "browserTarget": "lazy-loaded-standalone-components-routing-issue:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
