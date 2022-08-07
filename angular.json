@@ -95,7 +95,9 @@
           "options": {
             "baseHref": "/lazy-loaded-standalone-components-routing-issue/",
             "name": "Marlos Borges",
-            "email": "marlos.borges@gmail.com"
+            "email": "marlos.borges@gmail.com",
+            "nobBuild": true,
+            "repo": "https://github.com/marlosin/lazy-loaded-standalone-components-routing-issue.git"
           }
         }
       }
