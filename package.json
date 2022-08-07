@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "deploy": "ng deploy --no-silent --base-href=/lazy-loaded-standalone-components-routing-issue/"
+    "deploy": "ng deploy --no-silent"
   },
   "private": true,
   "dependencies": {
