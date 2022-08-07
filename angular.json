@@ -93,7 +93,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://marlosin.github.io/lazy-loaded-standalone-components-routing-issue/",
+            "baseHref": "/lazy-loaded-standalone-components-routing-issue/",
             "name": "Marlos Borges",
             "email": "marlos.borges@gmail.com"
           }
