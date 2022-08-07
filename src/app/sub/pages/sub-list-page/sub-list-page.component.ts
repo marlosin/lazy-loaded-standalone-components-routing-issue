@@ -12,32 +12,32 @@ import { RouterService } from 'app/core/services/router.service';
   template: `
   <ul>
     <li
-      *ngFor="let article of articles"
+      *ngFor="let sub of subs"
       [style.cursor]="'pointer'"
-      (click)="editArticle(article.id)"
-    >{{ article.title }}</li>
+      (click)="editSub(sub.id)"
+    >{{ sub.title }}</li>
   </ul>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ArticleListPageComponent implements OnInit {
+export class SubListPageComponent implements OnInit {
 
-  readonly articles = [
+  readonly subs = [
     {
       id: 1,
-      title: 'First Article',
+      title: 'First Sub',
       enabled: true,
       update_ts: Date.now() - 86400 * 1000,
     },
     {
       id: 2,
-      title: 'Second Article',
+      title: 'Second Sub',
       enabled: true,
       update_ts: Date.now() - (2 * 86400 * 1000),
     },
     {
       id: 3,
-      title: 'Third Article',
+      title: 'Third Sub',
       enabled: false,
       update_ts: Date.now() - (7 * 86400 * 1000),
     },
@@ -55,10 +55,10 @@ export class ArticleListPageComponent implements OnInit {
     );
   }
 
-  editArticle(articleId: number): void {
+  editSub(subId: number): void {
     this._routerService.navigate({
-      path: 'articles/edit',
-      params: [articleId],
+      path: 'subs/edit',
+      params: [subId],
     });
   }
 }

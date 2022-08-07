@@ -1,1 +1,1 @@
-export type AppMainRoute = '/' | 'articles' | 'articles/edit';
+export type AppMainRoute = '/' | 'subs' | 'subs/edit';

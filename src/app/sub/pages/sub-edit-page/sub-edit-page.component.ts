@@ -4,26 +4,26 @@ import { map, tap } from 'rxjs';
 import { CoreModule } from 'app/core/core.module';
 import { RouterService } from 'app/core/services/router.service';
 
-import { ArticleEditComponent } from 'app/articles/components/article-edit/article-edit.component';
+import { SubEditComponent } from 'app/sub/components/sub-edit/sub-edit.component';
 
 @Component({
-  selector: 'lazy-loaded-issue-app-article-edit-page',
+  selector: 'lazy-loaded-issue-app-sub-edit-page',
   standalone: true,
   imports: [
     CoreModule,
-    ArticleEditComponent,
+    SubEditComponent,
   ],
   template: `
-    <lazy-loaded-issue-app-article-edit></lazy-loaded-issue-app-article-edit>
+    <lazy-loaded-issue-app-sub-edit></lazy-loaded-issue-app-sub-edit>
   `,
   host: {
     class: 'contents',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ArticleEditPageComponent implements OnInit {
+export class SubEditPageComponent implements OnInit {
 
-  readonly article$ = this._routerService.params$.pipe(
+  readonly sub$ = this._routerService.params$.pipe(
     tap(params => console.log('params: ', params)),
     map(({ id }) => ({ id })),
   );
@@ -33,7 +33,7 @@ export class ArticleEditPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.article$.subscribe({
+    this.sub$.subscribe({
       next: (id) => {
         console.log('id param is:', id);
       }
