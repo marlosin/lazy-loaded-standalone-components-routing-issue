@@ -25,6 +25,11 @@ jobs:
       - name: Build
         run: |
           npm run build
+
+      - name: Set up git identity
+        run: |
+          git config --global user.email "marlos.borges@gmail.com"
+          git config --global user.name "Marlos Borges"
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
